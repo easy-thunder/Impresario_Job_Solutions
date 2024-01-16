@@ -1,0 +1,206 @@
+.stickyDivEnlargement{
+  position:fixed;
+  height: 2%;
+  width: 2%;
+  transform: rotate(45deg);
+  border: solid black 2px;
+}
+.editPDFModalBackground{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.56);
+  z-index: 99999999;
+  backdrop-filter: blur(3px);
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Center vertically */
+}
+.editPDFForm{
+  background-color: white;
+  width: 80vw;
+  height:80vh;
+
+
+}
+.minimize{
+  /* position: fixed; */
+  top: -1em;
+  z-index: 99999999;
+  color:blue;
+  /* right: .75em; */
+  transform: scale(2,2);
+  height: fit-content;
+  cursor: pointer;
+
+}
+
+
+
+.content {
+    height: 100vh; /* Adjust this based on your layout */
+    padding: 20px;
+  }
+  
+  .sticky-div {
+    position: fixed;
+    top: 0;
+    background-color: #f1f1f1;
+    padding: 15px;
+    z-index: 9999999;
+    background-color: white;
+    border: solid black .5em;
+    right: 0px;
+    bottom: 10em;
+    height: fit-content;
+    max-width: 30vw;
+    max-height: 50vh;
+    overflow-y: scroll;
+  }
+  /* #stickyDivParent{ */
+    /* resize: both;  */
+  /* } */
+
+  .loadingBackground {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.56);
+    z-index: 99999999;
+    backdrop-filter: blur(3px);
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center vertically */
+  }
+  @keyframes bounceAnimation {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-10px);
+    }
+    60% {
+      transform: translateY(-5px);
+    }
+  }
+
+  .errorMessage{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);    
+  }
+
+  
+  .loadingMessage {
+    position: absolute;
+    margin: auto;
+    font-size: 5vw;
+    color: red;
+  }
+  .loadingDot {
+    display: inline-block;
+    animation: bounceAnimation 2s infinite; /* Adjust the duration as needed */
+  }
+  .loadingDot:nth-child(1) {
+    animation-delay: 0s;
+  }
+  
+  .loadingDot:nth-child(2) {
+    animation-delay: 0.5s; /* Adjust the delay for the second dot */
+  }
+  
+  .loadingDot:nth-child(3) {
+    animation-delay: 1s; /* Adjust the delay for the third dot */
+  }
+
+
+  .buttonRight{
+    float: right;
+  }
+
+
+  .toggleSignUpButton{
+    width: fit-content;
+    top: 50%;
+    left: 36%;
+    transform: translate(-50%, -50%);
+    padding: 1px;
+    position: relative;
+
+
+  }
+
+  label, input {
+    display: inline-block;
+    width: 100px; 
+  }
+  
+  .userProfile{
+    margin-top: 5vh;
+  }
+
+  .headerForUserCard{
+    display: flex;
+    background-color: #291816; /* Red background color */
+    color: #fff; /* White text color */
+    padding: 5px;
+    border-radius: 8px 8px 0 0;
+  }
+
+  .containerForSkillsInCards{
+    background-color: #291816; /* Red background color */
+    color: #fff; /* White text color */
+    padding: 5px;
+    border-radius: 0px 0px 8px 8px;
+  }
+
+  .card {
+    background-color: #fff; /* White background */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
+    margin-top: 2rem;
+  
+    /* Add padding for content spacing */
+    padding: 5px;
+  }
+  
+  /* Custom styling for the card title */
+  .card h3 {
+    color: #333; /* Dark text color */
+    margin-bottom: 10px; /* Space between title and content */
+  }
+  
+  /* Custom styling for the card content */
+  .card p {
+    color: #666; /* Slightly darker text color */
+  }
+  
+  /* Custom styling for the card buttons */
+  .card button {
+    background-color: #3498db; /* Blue button color */
+    color: #fff; /* White text color */
+    border: none; /* Remove button border */
+    padding: 10px 15px; /* Add padding for button size */
+    margin-top: 10px; /* Space between button and content */
+    cursor: pointer; /* Change cursor on hover */
+    margin-left: .5rem;
+  }
+
+
+  
+
+.logo{
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 1px;
+  height: fit-content;
+  scale: 0.7;
+}
+

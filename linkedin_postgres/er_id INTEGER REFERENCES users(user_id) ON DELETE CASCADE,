@@ -1,0 +1,15 @@
+                                         Table "public.users"
+   Column    |          Type          | Collation | Nullable |                Default                 
+-------------+------------------------+-----------+----------+----------------------------------------
+ user_id     | integer                |           | not null | nextval('users_user_id_seq'::regclass)
+ user_key    | uuid                   |           | not null | gen_random_uuid()
+ email       | character varying(255) |           | not null | 
+ password    | character varying(255) |           | not null | 
+ snippets_id | integer[]              |           |          | 
+ username    | character varying(255) |           | not null | 
+Indexes:
+    "users_pkey" PRIMARY KEY, btree (user_id)
+    "users_user_key_key" UNIQUE CONSTRAINT, btree (user_key)
+Referenced by:
+    TABLE "snippets" CONSTRAINT "snippets_user_id_fkey" FOREIGN KEY (user_id) REFERENCES users(user_id)
+
