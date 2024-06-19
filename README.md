@@ -21,7 +21,7 @@ Open Chrome and go to chrome://extensions/.
 
 Enable "Developer mode" in the top right corner.
 
-Click on "Load unpacked" and select the folder containing your extension files.
+Click on "Load unpacked" and select the folder "local_job_helper(the folder not the files).
 
 The extension should now appear in your list of installed extensions.
 
@@ -34,6 +34,20 @@ Backend (package.json):
 Navigate to the backend directory.
 
 Run npm install to install the required dependencies.
+Troubleshooting: The dependencies are:
+├── bcrypt@5.1.1
+├── cors@2.8.5
+├── dotenv@16.4.5
+├── express-session@1.18.0
+├── express@4.19.2
+├── jspdf@2.5.1
+├── openai@4.52.0
+├── pg@8.12.0
+├── stripe@14.25.0
+└── uuid@9.0.1
+
+Note that you don't need stripe to run this, that was for production.
+
 
 Environment Variables:
 Create a .env file in the backend directory.
@@ -43,11 +57,12 @@ Fill in the following variables with your own values:
 DB_PASSWORD: Password for the PostgreSQL database.
 SESSION_SECRET: Secret for sessions and cookies.
 OPENAI_API_KEY: API key for OpenAI.
-STRIPE_SECRET_KEY: Secret key for Stripe access.
 Usage:
-Start your backend server by running npm start in the backend directory.
+Start your backend server by running node server.js in the backend directory.
 
 Start your frontend application by running npm start in the frontend directory.
+
+
 
 Access your Chrome extension by clicking on its icon.
 
