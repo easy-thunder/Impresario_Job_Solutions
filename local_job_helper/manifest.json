@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "local job solutions",
+  "version": "1.1",
+  "description": "Helps you generate cover letters with a click of a button",
+  "permissions": [
+    "activeTab",
+    "storage", 
+    "webRequest"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "css": ["styles.css"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "photos/ImpresarioLogoUpdated.png",
+        "success.html",
+        "cancel.html"
+      ],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
